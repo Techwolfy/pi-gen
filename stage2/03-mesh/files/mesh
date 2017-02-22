@@ -1,0 +1,1 @@
+@reboot			root	/etc/mesh/up.sh
