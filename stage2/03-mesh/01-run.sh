@@ -11,3 +11,5 @@ install -v -m 644 files/mesh.local						${ROOTFS_DIR}/etc/nginx/sites-available/
 
 #Website files
 install -v -d											${ROOTFS_DIR}/var/www/mesh
+
+echo "Mesh config installed."
