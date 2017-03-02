@@ -31,9 +31,9 @@ unmount_image ${IMG_FILE}
 
 mkdir -p ${DEPLOY_DIR}
 
-rm -f ${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.zip
+rm -f ${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.img
 
-echo zip ${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.zip ${IMG_FILE}
+echo cp ${IMG_FILE} ${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.img
 pushd ${STAGE_WORK_DIR} > /dev/null
-zip ${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.zip $(basename ${IMG_FILE})
+cp $(basename ${IMG_FILE}) ${DEPLOY_DIR}/${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.img
 popd > /dev/null
