@@ -1,2 +1,2 @@
-#raspberrypi-kernel-headers
+#raspberrypi-kernel-headers build-essential
 nginx php5-fpm
