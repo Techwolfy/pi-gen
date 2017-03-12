@@ -3,11 +3,11 @@
 #Blink power LED
 echo gpio > /sys/class/leds/led0/trigger
 echo 1 > /sys/class/leds/led0/brightness
-sleep 1;
+sleep 1
 echo 0 > /sys/class/leds/led0/brightness
-sleep 1;
+sleep 1
 echo 1 > /sys/class/leds/led0/brightness
-sleep 1;
+sleep 1
 
 
 #Connect to mesh network; script runs once at reboot
@@ -21,8 +21,8 @@ MESH_ID="MESHNET"
 /sbin/iw dev mesh0 mesh join $MESH_ID
 /sbin/iw dev mesh0 station dump > /home/pi/mesh_stations
 
-#TODO: Get/set IP addresses? IPv6 NDP?
 
-
-#Set power LED on
+#Set power LED on for 10s to signal boot completion, then turn off to save power
 echo 0 > /sys/class/leds/led0/brightness
+sleep 10
+echo 1 > /sys/class/leds/led0/brightness
