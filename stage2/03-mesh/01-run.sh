@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 #Install custom RTL8192CU drivers
-RTLWIFI_DIR=lib/modules/4.4.48+/kernel/drivers/net/wireless/realtek/rtlwifi
+RTLWIFI_DIR=lib/modules/4.4.50+/kernel/drivers/net/wireless/realtek/rtlwifi
 install -v -d											${ROOTFS_DIR}/${RTLWIFI_DIR}
 install -v -m 644 files/rtlwifi/rtlwifi.ko				${ROOTFS_DIR}/${RTLWIFI_DIR}/rtlwifi.ko
 install -v -m 644 files/rtlwifi/rtl_usb.ko				${ROOTFS_DIR}/${RTLWIFI_DIR}/rtl_usb.ko
