@@ -1,2 +1,1 @@
-@reboot			root		/etc/mesh/up.sh
-@reboot			www-data	/etc/mesh/backend.py &
+@reboot			root	/etc/mesh/up.sh

@@ -19,7 +19,11 @@ MESH_ID="MESHNET"
 #/sbin/ip link set dev mesh0 address $NEW_MAC_ADDR
 /sbin/ip link set up dev mesh0
 /sbin/iw dev mesh0 mesh join $MESH_ID
-/sbin/iw dev mesh0 station dump > /home/pi/mesh_stations
+#/sbin/iw dev mesh0 station dump > /home/pi/mesh_stations
+
+
+#Start GPIO backend script
+/etc/mesh/backend.py &
 
 
 #Set power LED on for 10s to signal boot completion, then turn off to save power
