@@ -1,10 +1,8 @@
-ssh locales less fbset sudo psmisc module-init-tools crda
-console-setup keyboard-configuration bash-completion unzip
+ssh less fbset sudo psmisc module-init-tools crda
+bash-completion
 python python-rpi.gpio
 hardlink ca-certificates curl
 fake-hwclock usbutils
-libraspberrypi-dev libraspberrypi-doc
-dosfstools
 raspberrypi-sys-mods
 usb-modeswitch
 apt-transport-https
